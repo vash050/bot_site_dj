@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-expanded="false">
+        создать элемент блока {{ block.name }}
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+{#        <li><a class="dropdown-item" href="{% url 'create_bot_object' %}/?q=1">создать элемент блока картинка </a></li>#}
+        <li><a class="dropdown-item" href="#">создать элемент блока видео </a></li>
+        <li><a class="dropdown-item" href="#">создать элемент блока текст </a></li>
+    </ul>
+</div>
+
+<div>
+{% for el in rez %}
+    {{ el.img }}
+    ------------------
+    {{ el.video }}
+    {{ el.order_number }}
+    {% endfor %}
+</div>
+</body>
+</html>
